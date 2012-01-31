@@ -1,8 +1,11 @@
-﻿
-namespace HideAndGoSeek
+﻿namespace HideAndGoSeek
 {
     abstract class Location
     {
+        /// <summary>
+        /// Sets the name of the location.
+        /// </summary>
+        /// <param name="name">Name of the location.</param>
         public Location(string name)
         {
             this.name = name;
@@ -14,8 +17,10 @@ namespace HideAndGoSeek
             get { return name; }
         }
 
+        //What locations are directly connected to this location. I.E. Bathroom ===> Hallway and Master Bedroom.
         public Location[] Exits;
 
+        //A brief description of the location.
         public virtual string Description
         {
             get
